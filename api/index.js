@@ -1,5 +1,5 @@
-const config = require("./config/global.config");
-const server = require("./express");
+const config = require("../config/global.config");
+const server = require("../express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
@@ -21,3 +21,5 @@ mongoose
     console.log(err);
     throw new Error(`Unable to connect to database: ${config.mongoUri}`);
   });
+
+module.exports = server;
